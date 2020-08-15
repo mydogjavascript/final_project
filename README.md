@@ -8,8 +8,6 @@
 
 ## Projected Techology for Project
 
-## Planned technologies to be used for the duration of the Team project:
-
 - GitHub Organization
 - Google Colab
 - Jupyter Notebook
