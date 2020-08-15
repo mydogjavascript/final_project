@@ -1,8 +1,14 @@
 # final_project
 
+## Communication protocol
+
+#### Team JavaScript will communicate through our JavaScript Team channel. We anticipate working collaboratively throughtout the project duration providing support in our strengths and requesting support in our weaknesses.
+
+#### Team JavaScript plans to use class sessions to collaborate along with using office hours and tutoring to guide through the project in its entirety.
+
 ## Projected Techology for Project
 
-### Here is a list of planned technologies to be used for the duration of the Team project:
+## Planned technologies to be used for the duration of the Team project:
 
 - GitHub Organization
 - Google Colab
@@ -19,9 +25,9 @@
 
 ## Google Slide Presentation Link
 
-#### https://docs.google.com/presentation/d/1rCUgGdReLXpcnDJisHFbRMw03b5xDLH4zoAbk-zz0tE/edit?usp=sharing
+### https://docs.google.com/presentation/d/1rCUgGdReLXpcnDJisHFbRMw03b5xDLH4zoAbk-zz0tE/edit?usp=sharing
 
-### Items needed in the Google slide presentation
+#### Items needed in the Google Slide Presentation for Segment 1
 
 ✓ Selected topic
 ✓ Reason why they selected their topic
