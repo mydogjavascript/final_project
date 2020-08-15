@@ -6,20 +6,6 @@
 
 #### Team JavaScript plans to use class sessions to collaborate along with using office hours and tutoring to guide through the project in its entirety.
 
-## Projected Techology for Project
-
-- GitHub Organization
-- Google Colab
-- Jupyter Notebook
-- Python
-- mlenv
-- Pandas
-- Pandas Profile
-- MatPlotLib
-- Numpy
-- Slack
-- Google Slides
-- VSCode
 
 ## Google Slide Presentation Link
 
@@ -28,6 +14,6 @@
 #### Items needed in the Google Slide Presentation for Segment 1
 
 ✓ Selected topic
-✓ Reason why they selected their topic
-✓ Description of their source of data
-✓ Questions they hope to answer with the data
+✓ Reason why we selected our topic
+✓ Description of source of data
+✓ Questions we hope to answer with the data
