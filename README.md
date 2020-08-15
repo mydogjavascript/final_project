@@ -16,3 +16,14 @@
 - Slack
 - Google Slides
 - VSCode
+
+## Google Slide Presentation Link
+
+#### https://docs.google.com/presentation/d/1rCUgGdReLXpcnDJisHFbRMw03b5xDLH4zoAbk-zz0tE/edit?usp=sharing
+
+### Items needed in the Google slide presentation
+
+✓ Selected topic
+✓ Reason why they selected their topic
+✓ Description of their source of data
+✓ Questions they hope to answer with the data
