@@ -12,18 +12,18 @@
 
 ## Outline of Project
 
-1. Determine the scope of the project
-  a. Selected data
-  b. Determined topic of our research
-  c. Selected the questions we wanted to answer
-2. Review and understand the data
-  a. Identify missing data
-  b. Identify data that is not helpful for the project
-  c. Map the plan for cleaning data
-3. Data Cleaning
-  a. Import data utilizing Pandas
-  b. Using Jupyter Notebook, eliminate missing and un-needed data
-  c. Transform the data as needed to binary values
+### 1. Determine the scope of the project
+####   a. Selected data
+####   b. Determined topic of our research
+####   c. Selected the questions we wanted to answer
+### 2. Review and understand the data
+####   a. Identify missing data
+####   b. Identify data that is not helpful for the project
+####   c. Map the plan for cleaning data
+### 3. Data Cleaning
+####   a. Import data utilizing Pandas
+####   b. Using Jupyter Notebook, eliminate missing and un-needed data
+####   c. Transform the data as needed to binary values
 
 
 ## Google Slide Presentation Link
