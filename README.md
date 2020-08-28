@@ -1,5 +1,13 @@
 # Team JavaScript Crash Data
 
+## Google Slide Presentation Link
+
+### https://docs.google.com/presentation/d/1rCUgGdReLXpcnDJisHFbRMw03b5xDLH4zoAbk-zz0tE/edit?usp=sharing
+
+## Link for the Dashboard Storyboard
+
+### https://docs.google.com/presentation/d/1jLxOb1EkOrz2bPw1YZ-Z6WS_bTuhQcq5VOKu3fQD41U/edit?usp=sharing
+
 ## Communication protocol
 
 #### Team JavaScript will communicate through our JavaScript Team channel. We anticipate working collaboratively throughtout the project duration providing support in our strengths and requesting support in our weaknesses.
@@ -13,26 +21,25 @@
 ## Outline of Project
 
 ### 1. Determine the scope of the project
-####   a. Selected data
-####   b. Determined topic of our research
-####   c. Selected the questions we wanted to answer
+
+        a. Selected data
+
+        b. Determined topic of our research
+
+        c. Selected the questions we wanted to answer
+
 ### 2. Review and understand the data
-####   a. Identify missing data
-####   b. Identify data that is not helpful for the project
-####   c. Map the plan for cleaning data
+
+        a. Identify missing data
+
+        b. Identify data that is not helpful for the project
+
+        c. Map the plan for cleaning data
+
 ### 3. Data Cleaning
-####   a. Import data utilizing Pandas
-####   b. Using Jupyter Notebook, eliminate missing and un-needed data
-####   c. Transform the data as needed to binary values
 
+        a. Import data utilizing Pandas
 
-## Google Slide Presentation Link
+        b. Using Jupyter Notebook, eliminate missing and un-needed data
 
-### https://docs.google.com/presentation/d/1rCUgGdReLXpcnDJisHFbRMw03b5xDLH4zoAbk-zz0tE/edit?usp=sharing
-
-#### Items needed in the Google Slide Presentation for Segment 1
-
-✓ Selected topic
-✓ Reason why we selected our topic
-✓ Description of source of data
-✓ Questions we hope to answer with the data
+        c. Transform the data as needed to binary values
