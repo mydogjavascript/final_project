@@ -43,3 +43,20 @@
         b. Using Jupyter Notebook, eliminate missing and un-needed data
 
         c. Transform the data as needed to binary values
+        
+        d. Crated and exported two data tables
+        
+### 4. Database Creation
+
+        a. Import data utilizing Sqlite
+
+        b. Joined databases       
+
+### 5. Machine Learning
+
+        a. Import data utilizing Pandas
+
+        b. Using Jupyter Notebook, performed machine learning models
+
+
+        
