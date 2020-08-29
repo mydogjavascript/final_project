@@ -56,7 +56,12 @@
 
         a. Import data utilizing Pandas
 
-        b. Using Jupyter Notebook, performed machine learning models
+        b. Using Jupyter Notebook, performed multiple machine learning models
 
+### 6. Dashboard Creation
+
+        a. Use HTML and Javascript to create the dashboard
+        
+        b. Use Python and Flask to develop interactive elements
 
         
