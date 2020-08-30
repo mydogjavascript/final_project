@@ -1,6 +1,7 @@
 # Import Dependencies for Machine Learning
 
-import pickle
+import joblib
+
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.automap import automap_base
@@ -197,17 +198,15 @@ ROS_model.fit(X_resampled, y_resampled)
 # Calculate the balanced accuracy score:
 ROS_pred = ROS_model.predict(X_test)
 balanced_accuracy_score(y_test, ROS_pred)
+
+# Save the model:
+joblib.dump(ROS_model, 'crash_predictor.joblib')
+
+# Load the model from disk:
+joblib.load('crash_predictor.joblib')
+
 print("Random Oversampler\naccuracy is",
       balanced_accuracy_score(y_test, ROS_pred)*100)
 
 # Print the imbalanced classification report:
 print(classification_report_imbalanced(y_test, ROS_pred))
-
-# Save the model using pickle:
-filename = 'finalized_model.sav'
-pickle.dump(ROS_model, open(filename, 'wb'))
-
-# Load the model from disk:
-loaded_model = pickle.load(open(filename, 'rb'))
-result = loaded_model.score(y_test, ROS_pred)
-print(result)
