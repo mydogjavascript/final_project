@@ -1,5 +1,6 @@
 # Import Dependencies for Machine Learning
 
+import pickle
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.automap import automap_base
@@ -46,10 +47,8 @@ crash_2 = crash_1.drop(
 # Rename the column titles for better clarity:
 crash_2.rename(columns={'dvcat': 'est_impact_kmh',
                         'dead': 'ultimate_outcome',
-                        'airbag': 'airbag_available',
                         'frontal': 'front_impact',
                         'ageOFocc': 'occupant_age',
-                        'yearacc': 'accident_year',
                         'yearVeh': 'vehicle_year',
                         'abcat': 'airbag_deployment',
                         'occRole': 'occupant_role',
@@ -203,3 +202,12 @@ print("Random Oversampler\naccuracy is",
 
 # Print the imbalanced classification report:
 print(classification_report_imbalanced(y_test, ROS_pred))
+
+# Save the model using pickle:
+filename = 'finalized_model.sav'
+pickle.dump(ROS_model, open(filename, 'wb'))
+
+# Load the model from disk:
+loaded_model = pickle.load(open(filename, 'rb'))
+result = loaded_model.score(y_test, ROS_pred)
+print(result)
