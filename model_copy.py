@@ -254,3 +254,24 @@ print("")
 
 # Print the imbalanced classification report:
 print(classification_report_imbalanced(y_test, ROS_pred))
+
+print("Time for a prediction!")
+print("")
+a = eval(input('0=Driver, 1=Passenger: '))
+b = eval(input('0=Female, 1=Male: '))
+c = eval(input('Occupant Age: '))
+d = eval(input('Injury Severity 0.0-4.0: '))
+e = eval(input('Belted=0, Not Belted=1: '))
+f = eval(input('Impact Speed 0=1-9, 1=10-24, 2=25-39, 3=40-54, 4=55+: '))
+g = eval(input('Airbag 0=Deploy, 1=No Delploy, 2=Unavailable: '))
+h = eval(input('Vehicle Year: '))
+i = eval(input('Front Impact 1=yes, 2=no: '))
+
+Xnew = [[a, b, c, d, e, f, g, h, i]]
+ynew = ROS_model.predict(Xnew)
+print("")
+print("1 = Dead")
+print("0 = Alive")
+print("")
+print("Predicted=%s" % ynew[0])
+print("")
