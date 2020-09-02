@@ -59,7 +59,9 @@ A data frame with 26217 observations on the following 15 variables:
 
         a. Selected data
                 i. "Airbag and other influences on accident fatalities"
-                ii. Description: US data, for 1997-2002, from police-reported car crashes in which there is a harmful event (people or property), and from which at least one vehicle was towed. Taken from nassCDS with 26,217 observations before data cleanup.
+                ii. Description: US data, for 1997-2002, from police-reported car crashes in which 
+                there is a harmful event (people or property), and from which at least one vehicle 
+                was towed. Taken from nassCDS with 26,217 observations before data cleanup.
 
         b. Determined topic of our research
                 i. Crash data is relevant to any driver, any parent with
