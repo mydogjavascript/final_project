@@ -80,10 +80,7 @@ A data frame with 26217 observations on the following 15 variables:
                     the data, backseat passenger data was not collected.
                 iii. Speed at impact is estimated
                 iv. Data is for accidents occuring between 1997-2002
-                v. Adjusted data instances where "ultimate outcome" is
-                   "dead" but "injury_severity" is listed as "severe". In
-                   these instances only, "injury_severity" was amended to
-                   match "ultimate outcome" of "dead".
+                v. Data is specific to accidents where a vehicle was towed
 
 ### 2. Review and understand the data
 
@@ -98,6 +95,7 @@ A data frame with 26217 observations on the following 15 variables:
                       numerous indicents assigned to single id's
                    - 'airbag' & 'deploy': Values are duplicated in the
                      'abcat' column
+                   - 'injury_severity': Values are not relevant to alive/dead outcome being saught
 
         c. Map the plan for cleaning data
                 i. Remove null values
@@ -131,8 +129,7 @@ A data frame with 26217 observations on the following 15 variables:
                         'occupant_age',
                         'vehicle_year',
                         'airbag_deployment',
-                        'occupant_role',
-                        'injury_severity'
+                        'occupant_role'
                 These features were chosen for the relevance of answering
                 our research question: "What factors are most relevant in
                 prediciting survival rates in a car accident?"
@@ -165,11 +162,11 @@ A data frame with 26217 observations on the following 15 variables:
 
         b. Using Jupyter Notebook, choose Machine Learning Model
                 i. We chose Random Oversampling as our ML model because we
-                   have far less rows of "alive" that we do "dead".
+                   have far less rows of "alive" than "dead" in the "ultimate_outcome" column.
                    Random oversampling manipulates the minority class
                    "dead" to allow for a resampled test and training
                    process.
-                ii. Limitations of Random Over Sampling include a possible
+                ii. Limitations of Random Over Sampling include a
                     low precision score for the minority class (dead).
                     The low precision score may indicate an inflated
                     accuracy score.
