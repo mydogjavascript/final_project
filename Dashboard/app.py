@@ -17,32 +17,14 @@ def home():
 def predict():
 
     int_features = [int(x) for x in request.form.values()]
+    print("int_features", int_features)
     final_features = [np.array(int_features)]
+    print("final_features", final_features)
     prediction = model.predict(final_features)
+    print("prediction", prediction)
 
-    output = round(prediction[0], 2)
-
-    return render_template('index.html', prediction_text='Occupant should be {}'.format(output))
-
-
-# +
-@app.route('/results', methods=['POST'])
-def results():
-
-    data = request.get_json(force=True)
-    prediction = model.predict([np.array(list(data.values()))])
-
-    output = prediction[0]
-    return jsonify(output)
+    return render_template('index.html', prediction_text="hello")
 
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-# +
-
-url = 'http://localhost:5000/results'
-r = requests.post(
-    url, json={'rate': 5, 'sales_in_first_month': 200, 'sales_in_second_month': 400})
-
-print(r.json())
