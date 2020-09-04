@@ -15,3 +15,5 @@
 # mock_schema.sql & mock_schema.txt both have a list of our schema in .SQL and .txt
 
 # technology.md is a list of the technology we intended to use in the planning stages of the project. The final version of the technology used is in our Google Slides presentation and the Requirements.txt file in the Master Branch.
+
+# raw_data.csv is our initial, complete raw data used in our initial analysis.
