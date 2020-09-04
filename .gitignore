@@ -1,6 +1,9 @@
 # ignore autosaves
 **/._*
 
+# ignore .DS_Store
+.DS_Store
+
 
 
 
