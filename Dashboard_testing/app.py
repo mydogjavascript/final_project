@@ -29,10 +29,10 @@ def result():
         to_predict_list = list(map(int, to_predict_list))
         result = ValuePredictor(to_predict_list)
         if int(result) == 1:
-            prediction = 'Too bad, YOU DEAD'
+            prediction = 'You did not survive'
         else:
-            prediction = 'You Survived!'
-        return render_template("index_test.html", prediction=prediction)
+            prediction = 'YOU SURVIVED!'
+        return prediction
 
 
 if __name__ == '__main__':

@@ -1,18 +1,27 @@
-body
-{
+body {
     color: #f7f7f7;
 }
 .jumbotron {
     background-image: url("../images/Test.gif");
     background-size: 100% 100%;
-    text-align:left;
+    text-align:center;
+    border-radius: 20px;
+    height: 210px;
+    width: 1100px;
   }
 p {
-  text-align: right;
-  color: lightsalmon;
+  text-align: center;
+  color: white;
 }
 img {
   border-radius: 5%;
+}
+
+h2 {
+  text-shadow: 8px 8px 10px red;
+    font-family: courier;
+    text-align: center;
+
 }
 
 h1.display-4 {
@@ -34,13 +43,12 @@ h1 {
     width:250px;
   }
 
-li {
-  font-family: courier;
-  text-align:center;
-  }
-button {
-  font-size: 25px;
-}
+li 
+{font-family: courier; text-align:center;}
+
+button 
+{font-size: 25px;}
+
 h3 {
   text-align:center;
   }
@@ -50,3 +58,76 @@ h3 {
   margin-right: auto;
   width: 90%;
   } 
+
+ul {
+  color: greenyellow;
+  font-family: verdana;
+  font-size: 16px;
+}
+label {
+  font-size: 20px;
+  color: yellow;
+}
+i {
+  font-size: 10px;
+  font-style: italic;
+  color: burlywood;
+}
+#reset {
+  width: 10em;  
+  height: 2em;
+  font-size: 10px;
+  float: none;
+  border-radius: 20px;
+  background-color: gray;
+}
+
+#predict {
+  width: 11.5em;  
+  height: 4em;
+  font-size: 19px;
+  text-align:center;
+  border-radius: 20px;
+  float: none;
+  background-color: green;
+  font-weight: 700;
+  box-shadow: 1px 2px black;
+}
+#prediction {
+  text-shadow: 8px 8px 10px blue;
+}
+
+
+
+
+select {
+  font-style: italic;
+  font-size: 14px;
+  width: 14em; 
+}
+
+.responsive-google-slides {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Ratio */
+  height: 0;
+  overflow: hidden;
+}
+.responsive-google-slides iframe {
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+h5 {
+  color: grey;
+}
+
+img {
+  border-radius: 8px;
+  max-width: 118%;
+  height: auto;
+}
+
