@@ -1,7 +1,7 @@
 # Import Dependencies for Machine Learning
 
 import joblib
-
+import pickle
 from sqlalchemy import create_engine, func
 from sqlalchemy.orm import Session
 from sqlalchemy.ext.automap import automap_base
@@ -204,7 +204,7 @@ crash_4 = pd.DataFrame(results, columns=['occupant_role',
 # Conduct Integer Encoding to Transform Text to Numbers
 
 crash_4 = crash_4.drop(['injury_severity'], axis=1)
-print(crash_4)
+
 le = LabelEncoder()
 
 crash_5 = crash_4.copy()
@@ -240,14 +240,24 @@ ROS_pred = ROS_model.predict(X_test)
 balanced_accuracy_score(y_test, ROS_pred)
 
 # Save the model:
-joblib.dump(ROS_model, 'crash_predictor2.joblib')
+joblib.dump(ROS_model, 'crash_predictor2.pkl')
+
+# prediction function
+
+
+# def ValuePredictor(to_predict_list):
+#     to_predict = np.array(to_predict_list).reshape(1, 12)
+#     loaded_model = pickle.load(open("model.pkl", "rb"))
+#     result = loaded_model.predict(to_predict)
+#     return result[0]
 
 # Load the model from disk:
-joblib.load('crash_predictor2.joblib')
+# joblib.load('crash_predictor2.pkl')
 
 # print("Random Oversampler\naccuracy is",
 #       balanced_accuracy_score(y_test, ROS_pred)*100)
 # print("")
+
 
 # # Print the imbalanced classification report:
 # print(classification_report_imbalanced(y_test, ROS_pred))
