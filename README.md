@@ -45,7 +45,7 @@ A data frame with 26217 observations on the following 15 variables:
 
 ## Data Choice
 
-#### Team JavaScript wanted to work with data that was relevent to anyone. Crash data is relevant to any driver, any parent with children who have earned their driver license, and anyone who uses public roadways. This data included factors we had a general interest in to include age and sex of injured individual, airbag deployment, seatbelt usage, and year of vehicle. This data allows us to learn more about crash safety. We are also looking forward to making connections to injury severity and vehicle specifications and driver/passenger attributes.
+#### Team JavaScript chose data that was relevent to anyone. Crash data is relevant to any driver, any parent with children who have earned their driver license, and anyone who uses public roadways. This data included factors we had a general interest in to include age and sex of injured individual, airbag deployment, seatbelt usage, and year of vehicle. This data allows us to learn more about crash safety. We are also looking forward to making connections to injury severity and vehicle specifications and driver/passenger attributes.
 
 ## Outline of Project
 
