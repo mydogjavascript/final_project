@@ -9,7 +9,7 @@
 ### https://docs.google.com/presentation/d/1jLxOb1EkOrz2bPw1YZ-Z6WS_bTuhQcq5VOKu3fQD41U/edit?usp=sharing
 
 #### Dataset Description
-US data, for 1997-2002, from police-reported car crashes in which there is a harmful event (people or property), and from which at least one vehicle was towed. Data are restricted to front-seat occupants, include only a subset of the variables recorded, and are restricted in other ways also.
+US data, for 1997-2002, from police-reported car crashes in which there is a harmful event (people or property), and from which at least one vehicle was towed. Data is restricted to front-seat occupants, include only a subset of the variables recorded, and is restricted in other ways.
 #### Format
 A data frame with 26217 observations on the following 15 variables:
 ##### dvcat
@@ -17,15 +17,15 @@ A data frame with 26217 observations on the following 15 variables:
 ##### weight
 * Observation weights, albeit of uncertain accuracy, designed to account for varying sampling probabilities.
 ##### dead
-* Factor with levels alive dead
+* Factor with levels alive and dead
 ##### airbag
-* Factor with levels none airbag
+* Factor with levels none and airbag
 ##### seatbelt
-* Factor with levels none belted
+* Factor with levels none and belted
 ##### frontal
 * Numeric vector; 0=non-frontal, 1=frontal impact
 ##### sex
-* Factor with levels f m
+* Factor with levels f and m
 ##### ageOFocc
 * Age of occupant in years
 ##### yearacc
