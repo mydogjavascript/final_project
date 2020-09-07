@@ -169,7 +169,18 @@ A data frame with 26217 observations on the following 15 variables:
 
 ### 7. Dashboard Creation
 
-        a. Use HTML and Javascript to create the dashboard
+        a. Use HTML template and css to create the dashboard
+                i. html will include jumbotron, project title, music, drop down selections
+                   for predictions, reset button, a gif and our data limitation.  
+                ii. Google Slides may be added 
+                iii. css will include neon colors, consistent courier font, borders around
+                     images and boxes 
 
         b. Use Python and Flask to develop interactive elements
+                i.  import joblib, numpy, flask, pandas and pickle to run app.py
+                ii. use joblib to import model data to populate the machine learning
+                    interactive elements of the dashboard.
+                iii. Ultimate outcome prediction:
+                        a. You did not survive.
+                        b. YOU SURVIVED!
 
