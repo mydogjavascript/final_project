@@ -201,9 +201,10 @@ crash_4 = pd.DataFrame(results, columns=['occupant_role',
                                          'vehicle_year',
                                          'front_impact', ])
 
-# Conduct Integer Encoding to Transform Text to Numbers
-
+# drop injury severity to avoid overfitting the model
 crash_4 = crash_4.drop(['injury_severity'], axis=1)
+
+# Conduct Integer Encoding to Transform Text to Numbers
 
 le = LabelEncoder()
 
