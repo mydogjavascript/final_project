@@ -17,14 +17,6 @@
 
     <!-- scroll-lock for title through the jumbotron -->
 
-    <style>
-        div.sticky {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            font-size: 20px;
-        }
-    </style>
 </head>
 
 <body class="text-light bg-dark">
@@ -37,7 +29,7 @@
             </nav>
         </div>
         <div class="jumbotron">
-            <h1 class="display-4" style="color:orange;">crash survival</h1>
+            <h1 class="display-4" >crash survival</h1>
             <p class="lead">Determining crash occupant outcome through the use of machine learning</p>
         </div>
         <div class="row">
@@ -215,21 +207,21 @@
                         <h5>Driving Tunes</h5>
 
                         <!-- audio source reference -->
-                        <!-- <a href="https://www.bensound.com">bensound.com</a> -->
+                        <a href="https://www.bensound.com">bensound.com</a>
 
                         <audio controls>
 
                             <!-- bensound_punky is royalty-free if source is referenced -->
-                            <!-- <source src="../static/sounds/bensound-punky.mp3"> -->
+                            <source src="static/sounds/bensound-punky.mp3">
 
-                            <source src="static/sounds/driving.mp3" type="audio/mpeg">
+                            <!-- <source src="static/sounds/driving.mp3" type="audio/mpeg"> -->
                             Your browser does not support the audio element.
                         </audio>
 
                         <!-- adding Polaroid effect to the dummy & prediction result-->
 
                         <div id="polaroid" class="polaroid">
-                            <img id="dummy" src="static/images/Dummy.gif" style="width:100%">
+                            <img id="dummy" src="static/images/Dummy.gif">
                             <div class="container">
                                 <h2 id="prediction">{{ prediction }}</h2>
                             </div>
