@@ -4,58 +4,99 @@
 
 ### https://docs.google.com/presentation/d/1rCUgGdReLXpcnDJisHFbRMw03b5xDLH4zoAbk-zz0tE/edit?usp=sharing
 
-## Link for the Dashboard Storyboard
+## Link for the Dashboard
 
-### https://docs.google.com/presentation/d/1jLxOb1EkOrz2bPw1YZ-Z6WS_bTuhQcq5VOKu3fQD41U/edit?usp=sharing
+### https://mydogjavascript.herokuapp.com/
 
-#### Dataset Description
+---
+
+## Dataset Description
+
 US data, for 1997-2002, from police-reported car crashes in which there is a harmful event (people or property), and from which at least one vehicle was towed. Data is restricted to front-seat occupants, include only a subset of the variables recorded, and is restricted in other ways.
+
 #### Format
+
 A data frame with 26217 observations on the following 15 variables:
+
 ##### dvcat
-* Ordered factor with levels (estimated impact speeds) 1-9km/h, 10-24, 25-39, 40-54, 55+
+
+- Ordered factor with levels (estimated impact speeds) 1-9km/h, 10-24, 25-39, 40-54, 55+
+
 ##### weight
-* Observation weights, albeit of uncertain accuracy, designed to account for varying sampling probabilities.
+
+- Observation weights, albeit of uncertain accuracy, designed to account for varying sampling probabilities.
+
 ##### dead
-* Factor with levels alive and dead
+
+- Factor with levels alive and dead
+
 ##### airbag
-* Factor with levels none and airbag
+
+- Factor with levels none and airbag
+
 ##### seatbelt
-* Factor with levels none and belted
+
+- Factor with levels none and belted
+
 ##### frontal
-* Numeric vector; 0=non-frontal, 1=frontal impact
+
+- Numeric vector; 0=non-frontal, 1=frontal impact
+
 ##### sex
-* Factor with levels f and m
+
+- Factor with levels f and m
+
 ##### ageOFocc
-* Age of occupant in years
+
+- Age of occupant in years
+
 ##### yearacc
-* Year of accident
+
+- Year of accident
+
 ##### yearVeh
-* Year of model of vehicle; a numeric vector
+
+- Year of model of vehicle; a numeric vector
+
 ##### abcat
-* Did one or more (driver or passenger) airbag(s) deploy? This factor has levels deploy nodeploy unavail
+
+- Did one or more (driver or passenger) airbag(s) deploy? This factor has levels deploy nodeploy unavail
+
 ##### occRole
-* Factor with levels driver pass
+
+- Factor with levels driver pass
+
 ##### deploy
-* Numeric vector: 0 if an airbag was unavailable or did not deploy; 1 if one or more bags deployed.
+
+- Numeric vector: 0 if an airbag was unavailable or did not deploy; 1 if one or more bags deployed.
+
 ##### injSeverity
-* Numeric vector: 0=none, 1=possible injury, 2=no incapacity, 3=incapacity, 4=killed; 5=unknown, 6=prior death
+
+- Numeric vector: 0=none, 1=possible injury, 2=no incapacity, 3=incapacity, 4=killed; 5=unknown, 6=prior death
+
 ##### caseid
-* Created by pasting together the populations sampling unit, the case number, and the vehicle number.<br> Within each year, use this to uniquely identify the vehicle.
+
+- Created by pasting together the populations sampling unit, the case number, and the vehicle number. Within each year, use this to uniquely identify the vehicle.
+
+---
 
 ## Data Choice
 
-#### Team JavaScript chose data that was relevent to anyone. Crash data is relevant to any driver, any parent with children who have earned their driver license, and anyone who uses public roadways. This data included factors we had a general interest in to include age and sex of injured individual, airbag deployment, seatbelt usage, and year of vehicle. This data allows us to learn more about crash safety. We are also looking forward to making connections to injury severity and vehicle specifications and driver/passenger attributes.
+### Team JavaScript chose data that was relevent to anyone. Crash data is relevant to any driver, any parent with children who have earned their driver license, and anyone who uses public roadways. This data included factors we had a general interest in to include age and sex of injured individual, airbag deployment, seatbelt usage, survival outcomes, and year of vehicle. This data allows us to learn more about crash safety. We are also looking forward to making connections to injury severity and vehicle specifications and driver/passenger attributes.
 
-## Outline of Project
+---
 
-### 1. Determine the scope of the project
+## Outline of the Project & Presentation
+
+### 1. Introduce/Determine the scope of the project (David to Present- Google Slides)
 
         a. Selected data
                 i. "Airbag and other influences on accident fatalities"
-                ii. Description: US data, for 1997-2002, from police-reported car crashes in which 
-                there is a harmful event (people or property), and from which at least one vehicle 
-                was towed. Taken from nassCDS with 26,217 observations before data cleanup.
+                ii. Description: US data, for 1997-2002, from police-
+                    reported car crashes in which
+                    there is a harmful event (people or property), and
+                    from which at least one vehicle was towed. Taken from
+                    nassCDS with 26,217 observations before data cleanup.
 
         b. Determined topic of our research
                 i. Crash data is relevant to any driver, any parent with
@@ -70,15 +111,18 @@ A data frame with 26217 observations on the following 15 variables:
                     factors?
 
         d. Identify data limitations
-                i. There are coonsiderably less data for >40km/h
+                i. There are considerably less data for >40km/h
                    than <40km/h
                 ii. Only driver and frontseat passengers are reflected in
                     the data, backseat passenger data was not collected.
                 iii. Speed at impact is estimated
                 iv. Data is for accidents occuring between 1997-2002
                 v. Data is specific to accidents where a vehicle was towed
+                vi. Data has significantly more survived accidents than
+                    killed accidents so precision rate is not as high in
+                    killed accidents
 
-### 2. Review and understand the data
+### 2. Review and understand the data (Lauren present this part- Pandas Profile)
 
         a. Identify missing data
 
@@ -91,7 +135,8 @@ A data frame with 26217 observations on the following 15 variables:
                       numerous indicents assigned to single id's
                    - 'airbag' & 'deploy': Values are duplicated in the
                      'abcat' column
-                   - 'injury_severity': Values are not relevant to alive/dead outcome being saught
+                   - 'injury_severity': Values are not relevant to
+                      alive/dead outcome being saught
 
         c. Map the plan for cleaning data
                 i. Remove null values
@@ -102,18 +147,7 @@ A data frame with 26217 observations on the following 15 variables:
                 iv. renamed classification values for frontal impact
                     to (1) and non-frontal impact to (0)
 
-### 3. Data Cleaning
-
-        a. Import data utilizing Pandas
-
-        b. Using Jupyter Notebook, eliminate missing and un-needed data
-
-        c. Transform the data as needed to binary values or binning
-                i. Binning utilized for speed
-                ii. Binary values used for "frontal" column for impact
-                    location
-
-### 4. Feature Engineering and Selection
+### 3. Feature Engineering and Selection (Lauren present this part)
 
         a. Feature engineering- there is no need for feature engineering with
            this data set
@@ -145,14 +179,18 @@ A data frame with 26217 observations on the following 15 variables:
                     has no place in our analysis.  The year of the
                     accident did not seem important because
 
-### 5. Database Creation
+### 4. Data Cleaning (Mike to present this part- code ready to show)
 
-        a. Import data utilizing SQLite
-                i. Create 2 tables: "Occupants" & "Accidents"
+        a. Import data utilizing Pandas
 
-        b. Joined databases using Natural Join
+        b. Using Jupyter Notebook, eliminate missing and un-needed data
 
-### 6. Machine Learning
+        c. Transform the data as needed to binary values or binning
+                i. Binning utilized for speed
+                ii. Binary values used for "frontal" column for impact
+                    location
+
+### 5. Machine Learning (Mike to present this part)
 
         a. Import data utilizing Pandas
 
@@ -167,20 +205,39 @@ A data frame with 26217 observations on the following 15 variables:
                     The low precision score may indicate an inflated
                     accuracy score.
 
-### 7. Dashboard Creation
+### 6. Database Creation (Mike to present this part)
+
+        a. Import data utilizing SQLite
+                i. Create 2 tables: "Occupants" & "Accidents"
+
+        b. Joined databases using Natural Join
+
+### 7. Dashboard Creation (Rob to present this part- heroku site open)
 
         a. Use HTML template and css to create the dashboard
-                i. html will include jumbotron, project title, music, drop down selections
-                   for predictions, reset button, a gif and our data limitation.  
-                ii. Google Slides may be added 
-                iii. css will include neon colors, consistent courier font, borders around
-                     images and boxes 
+                i. html will include jumbotron, project title, music, drop
+                   down selections
+                   for predictions, reset button, a gif and our data
+                   limitation.
+                        1. Images, music and gif are in the “static”
+                           folder on the master branch
+                        2. Html template in “templates” folder on master
+                           branch
+                ii. Google Slides are embedded in dashboard
+                iii. css will include neon colors, consistent courier
+                     font, borders around images and boxes
+                        1. Organized based on importance to the website
+                           format and categorized
+
 
         b. Use Python and Flask to develop interactive elements
-                i.  import joblib, numpy, flask, pandas and pickle to run app.py
-                ii. use joblib to import model data to populate the machine learning
-                    interactive elements of the dashboard.
+                i.  import joblib, numpy, flask, pandas and pickle to run
+                    app.py
+                ii. use joblib to import model data to populate the
+                    machine learning interactive elements of the
+                    dashboard.
+                iii. deploy app on Heroku and title “mydogjavascript”
+                        1. Include Procfile on master branch
                 iii. Ultimate outcome prediction:
                         a. You did not survive.
                         b. YOU SURVIVED!
-
