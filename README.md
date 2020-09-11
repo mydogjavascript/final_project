@@ -82,7 +82,7 @@ A data frame with 26217 observations on the following 15 variables:
 
 ## Data Choice
 
-### Team JavaScript chose data that was relevent to anyone. Crash data is relevant to any driver, any parent with children who have earned their driver license, and anyone who uses public roadways. This data included factors we had a general interest in to include age and sex of injured individual, airbag deployment, seatbelt usage, survival outcomes, and year of vehicle. This data allows us to learn more about crash safety. We are also looking forward to making connections to injury severity and vehicle specifications and driver/passenger attributes.
+### Team JavaScript chose data that was relevant to anyone. Crash data is relevant to any driver, any parent with children who have earned their driver license, and anyone who uses public roadways. This data included factors we had a general interest in to include age and sex of injured individual, airbag deployment, seatbelt usage, survival outcomes, and year of vehicle. This data allows us to learn more about crash safety. We are also looking forward to making connections to injury severity and vehicle specifications and driver/passenger attributes.
 
 ---
 
@@ -102,7 +102,7 @@ A data frame with 26217 observations on the following 15 variables:
                 i. Crash data is relevant to any driver, any parent with
                    children who have earned their driver license, and
                    anyone who uses public roadways. We are also looking
-                   forward to making connections to injury severity and
+                   forward to making connections to fatality rates,
                    vehicle specifications and driver/passenger attributes.
 
         c. Selected the questions we wanted to answer
@@ -113,14 +113,18 @@ A data frame with 26217 observations on the following 15 variables:
         d. Identify data limitations
                 i. There are considerably less data for >40km/h
                    than <40km/h
-                ii. Only driver and frontseat passengers are reflected in
+                ii. Only driver and front seat passengers are reflected in
                     the data, backseat passenger data was not collected.
                 iii. Speed at impact is estimated
-                iv. Data is for accidents occuring between 1997-2002
+                iv. Data is for accidents occurring between 1997-2002
                 v. Data is specific to accidents where a vehicle was towed
                 vi. Data has significantly more survived accidents than
                     killed accidents so precision rate is not as high in
                     killed accidents
+
+        e. Recommendation for future analysis or something we would have done differently
+                i. We would like extra time to find opportunity to do some analysis around injury severity
+                ii. We regret picking a data set that had limited data for our target feature ultimate outcome
 
 ### 2. Review and understand the data (Lauren present this part- Pandas Profile)
 
@@ -132,14 +136,14 @@ A data frame with 26217 observations on the following 15 variables:
                    - 'yearacc': Year the accident occurred from 1997-2002
                       and is not relevant to the analysis
                    - 'caseid': Not unique identifiers,
-                      numerous indicents assigned to single id's
+                      numerous incidents assigned to single id's
                    - 'airbag' & 'deploy': Values are duplicated in the
                      'abcat' column
                    - 'injury_severity': Values are not relevant to
-                      alive/dead outcome being saught
+                      alive/dead outcome being sought
 
         c. Map the plan for cleaning data
-                i. Remove null values
+                i. Remove null values- minimal
                 ii. rename column names for user
                     clarity
                 iii. renamed classification values for seatbelt
@@ -153,16 +157,17 @@ A data frame with 26217 observations on the following 15 variables:
            this data set
 
         b. Feature selection- 'est_impact_kmh',
-                        'ultimate_outcome',
-                        'airbag_available',
                         'front_impact',
                         'occupant_age',
+                        'passenger_sex',
+                        'seatbelt',
                         'vehicle_year',
                         'airbag_deployment',
-                        'occupant_role'
+                        'occupant_role',
+                        'ultimate_outcome' (target)
                 These features were chosen for the relevance of answering
                 our research question: "What factors are most relevant in
-                prediciting survival rates in a car accident?"
+                predicting survival rates in a car accident?"
 
         c. Make predictions on how feature engineering and selection may
            affect data later in the project.
@@ -173,11 +178,11 @@ A data frame with 26217 observations on the following 15 variables:
                    column.  Removing this redundancy allowed for more
                    concise learning for the model.
                 ii. Removing the columns indicating weight, year of
-                    accident and the case id will have no affect on our
-                    data outcomes.  Weight is a previously indiciated
+                    accident and the case id will have no effect on our
+                    data outcomes.  Weight is a previously indicated
                     importance level from the original data collector and
                     has no place in our analysis.  The year of the
-                    accident did not seem important because
+                    accident did not seem important because the didn't anticipate relevance within data collected.
 
 ### 4. Data Cleaning (Mike to present this part- code ready to show)
 
@@ -196,7 +201,7 @@ A data frame with 26217 observations on the following 15 variables:
 
         b. Using Jupyter Notebook, choose Machine Learning Model
                 i. We chose Random Oversampling as our ML model because we
-                   have far less rows of "alive" than "dead" in the "ultimate_outcome" column.
+                   have far less rows of "dead" than "alive" in the "ultimate_outcome" column.
                    Random oversampling manipulates the minority class
                    "dead" to allow for a resampled test and training
                    process.
