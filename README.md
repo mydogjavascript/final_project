@@ -6,7 +6,7 @@
 
 ## Link for the Dashboard
 
-### https://mydogjavascript.herokuapp.com/
+### https://finalprojectcrash.herokuapp.com/
 
 ---
 
@@ -241,7 +241,7 @@ A data frame with 26217 observations on the following 15 variables:
                 ii. use joblib to import model data to populate the
                     machine learning interactive elements of the
                     dashboard.
-                iii. deploy app on Heroku and title “mydogjavascript”
+                iii. deploy app on Heroku and title “finalprojectcrash”
                         1. Include Procfile on master branch
                 iii. Ultimate outcome prediction:
                         a. You did not survive.
